@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>조선의 기틀 탐구 자료실</title>
+<style>
+:root{--coral:#f18780;--pink:#fff0eb;--brown:#704524;--ink:#302a27;--muted:#71665f;--paper:#fffdfb;--green:#dce9c4;--line:#eadbd2}
+*{box-sizing:border-box}body{margin:0;background:#fff8f4;color:var(--ink);font-family:"Malgun Gothic","Apple SD Gothic Neo",sans-serif;line-height:1.75}
+header{background:var(--coral);padding:28px 22px 34px;color:white}
+.hero{max-width:1120px;margin:auto;display:flex;gap:24px;align-items:center;justify-content:space-between}
+.kicker{font-size:13px;letter-spacing:.12em;font-weight:800;opacity:.9}
+h1{font-size:clamp(28px,4vw,44px);line-height:1.25;margin:8px 0 10px}
+header p{margin:0;max-width:650px;font-size:16px}
+.hero-tag{background:#fff4ef;color:var(--brown);border-radius:22px;padding:16px 20px;font-weight:800;min-width:190px;text-align:center;box-shadow:0 6px 0 #d76f69}
+main{max-width:1120px;margin:24px auto;padding:0 18px}
+.intro{background:white;border:1px solid var(--line);border-radius:18px;padding:18px 22px;margin-bottom:20px}
+.intro strong{color:var(--brown)}
+.layout{display:grid;grid-template-columns:235px 1fr;gap:22px;align-items:start}
+nav{background:var(--pink);padding:14px;border-radius:18px;position:sticky;top:14px;border:1px solid #f3d9d0}
+nav h2{font-size:16px;margin:5px 9px 10px;color:var(--brown)}
+.navbtn{width:100%;border:0;background:transparent;padding:12px 13px;text-align:left;font:inherit;font-weight:700;border-radius:12px;cursor:pointer;color:var(--ink);margin:2px 0}
+.navbtn:hover,.navbtn.active{background:var(--brown);color:white}
+.navbtn span{display:inline-block;width:28px}
+.content{min-width:0}
+.page{display:none;background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:clamp(18px,3vw,30px);box-shadow:0 8px 24px #7045240c}
+.page.active{display:block}
+.pagehead{border-bottom:2px solid var(--line);padding-bottom:16px;margin-bottom:20px}
+.pagehead .eyebrow{color:#c34e88;font-size:13px;font-weight:900}
+h2{font-size:28px;line-height:1.35;margin:4px 0;color:var(--brown)}
+.pagehead p{margin:8px 0 0;color:var(--muted)}
+h3{font-size:19px;margin:22px 0 9px;color:var(--brown)}
+.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}
+.card{background:white;border:1px solid var(--line);border-radius:15px;padding:16px}
+.card h3{margin:0 0 7px;font-size:17px}
+.card p{margin:0}
+.pill{display:inline-block;background:#fce1e9;color:#943d68;border-radius:999px;padding:2px 9px;font-size:12px;font-weight:800;margin-bottom:8px}
+.callout{background:#f4f3e7;border-left:5px solid #b5cb69;border-radius:8px;padding:13px 16px;margin:16px 0}
+.timeline{display:flex;gap:10px;flex-wrap:wrap;margin:12px 0}
+.time{background:#fff0eb;border:1px solid #f0d2c6;border-radius:12px;padding:10px 13px;flex:1;min-width:130px}
+.time b{display:block;color:var(--brown);font-size:17px}
+ul{padding-left:22px;margin:8px 0}li{margin:5px 0}
+.glossary{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.glossary div{background:#fff7f2;border-radius:10px;padding:9px 12px}
+.glossary b{color:#a44d76}
+footer{max-width:1120px;margin:18px auto 34px;padding:0 18px;color:var(--muted);font-size:13px}
+a{color:#8e4e26} .source-list li{overflow-wrap:anywhere}
+@media(max-width:760px){.hero{display:block}.hero-tag{margin-top:18px;display:inline-block}.layout{grid-template-columns:1fr}nav{position:static}.navgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:3px}.cards,.glossary{grid-template-columns:1fr}.page{padding:18px}h2{font-size:24px}}
+</style>
+</head>
+<body>
+<header><div class="hero">
+<div><div class="kicker">초등 사회 · 조선의 건국</div><h1>조선의 기틀 탐구 자료실</h1><p>수도 · 건축물 · 법 · 유교 · 교육<br>자료를 읽고 필요한 정보를 골라 우리 모둠의 보고서를 만들어 보자.</p></div>
+<div class="hero-tag">탐구 자료 모음<br>5학년 사회</div>
+</div></header>
+<main>
+
+<div class="layout">
+<nav aria-label="분야 선택"><h2>탐구 분야</h2><div class="navgrid">
+<button class="navbtn active" data-page="capital"><span>🏙️</span>수도</button>
+<button class="navbtn" data-page="buildings"><span>🏯</span>건축물</button>
+<button class="navbtn" data-page="law"><span>📜</span>법</button>
+<button class="navbtn" data-page="confucian"><span>📚</span>유교</button>
+<button class="navbtn" data-page="education"><span>✏️</span>교육</button>
+</div></nav>
+<div class="content">
+<section class="page active" id="capital">
+<div class="pagehead"><div class="eyebrow">FIELD 01 · 수도</div><h2>조선은 왜 한양을 수도로 삼았을까?</h2><p>새로운 나라를 세운 조선은 수도를 한양으로 옮기고 나라를 다스릴 중심지를 마련했다.</p></div>
+<div class="cards">
+<div class="card"><span class="pill">위치</span><h3>나라의 중심에 있는 곳</h3><p>한양은 한반도의 가운데 쪽에 있어 여러 지역으로 오가기 편리했다. 수도는 왕과 관리들이 나라의 중요한 일을 처리하는 중심지였다.</p></div>
+<div class="card"><span class="pill">교통</span><h3>한강을 이용하기 좋은 곳</h3><p>한강을 통해 사람과 물건을 옮길 수 있었다. 강과 길은 물자를 나르고 다른 지역과 소식을 주고받는 데 도움이 되었다.</p></div>
+<div class="card"><span class="pill">지형</span><h3>산으로 둘러싸인 곳</h3><p>한양 주변에는 산이 있어 도읍을 둘러싸고 지키는 데 유리했다. 주변의 지형을 살펴 도성과 성문을 만들었다.</p></div>
+<div class="card"><span class="pill">도읍 옮기기</span><h3>한양으로 수도를 옮기다</h3><p>태조 이성계는 1392년 조선을 세웠고, 1394년 수도를 한양으로 옮겼다. 한양에는 궁궐과 관청, 시장과 백성이 사는 공간이 마련되었다.</p></div>
+</div>
+<div class="callout"><b>자료를 읽을 때 살펴볼 점</b><br>한양의 위치와 자연환경은 나라를 다스리는 데 어떤 도움을 주었을까? 수도가 되면서 한양에는 어떤 시설이 필요했을까?</div>
+<h3>함께 알아둘 낱말</h3><div class="glossary"><div><b>도읍</b> 나라의 수도</div><div><b>천도</b> 수도를 다른 곳으로 옮기는 일</div><div><b>도성</b> 수도를 둘러싼 성</div><div><b>관청</b> 나라의 일을 맡아 처리하는 곳</div></div>
+</section>
+
+<section class="page" id="buildings">
+<div class="pagehead"><div class="eyebrow">FIELD 02 · 건축물</div><h2>한양의 건축물에는 어떤 뜻이 담겼을까?</h2><p>조선은 궁궐과 제사를 지내는 장소, 성문 등을 유교의 생각에 따라 마련했다.</p></div>
+<div class="cards">
+<div class="card"><span class="pill">왕이 일하는 곳</span><h3>경복궁</h3><p>경복궁은 조선을 대표하는 궁궐이다. 왕이 신하들과 나라의 일을 의논하고 큰 행사를 치르는 곳이었다. ‘경복’에는 왕과 백성이 큰 복을 누리기를 바라는 뜻이 담겨 있다.</p></div>
+<div class="card"><span class="pill">조상에게 제사</span><h3>종묘</h3><p>종묘는 조선 왕과 왕비의 신주를 모시고 제사를 지내던 곳이다. 왕실의 조상을 공경하는 유교의 생각이 드러난다.</p></div>
+<div class="card"><span class="pill">땅과 곡식의 신</span><h3>사직단</h3><p>사직단은 토지와 곡식의 신에게 제사를 지내던 곳이다. 농업이 중요했던 사회에서 땅과 곡식은 백성의 생활과 나라의 안정에 매우 중요했다.</p></div>
+<div class="card"><span class="pill">수도를 지키는 시설</span><h3>한양도성과 성문</h3><p>한양도성은 수도를 둘러싼 성이다. 성문은 사람들이 드나드는 길이면서 수도를 지키는 역할도 했다. 도성 안에는 궁궐과 관청, 시장과 주거지가 자리 잡았다.</p></div>
+<div class="card"><span class="pill">이름에 담긴 뜻</span><h3>근정전과 사정전</h3><p>경복궁의 근정전은 나라의 큰 행사를 치르는 중심 건물이다. ‘근정’은 부지런히 정치를 한다는 뜻을 담고 있다. 사정전은 왕이 신하들과 나라의 일을 의논하던 곳으로, 깊이 생각해 바르게 판단한다는 뜻과 관련이 있다.</p></div>
+<div class="card"><span class="pill">한양의 질서</span><h3>사대문과 종루</h3><p>한양의 성문과 종루에도 유교에서 중요하게 여긴 덕목과 관련된 이름을 붙였다. 건축물의 이름과 배치를 살펴보면 조선이 중요하게 여긴 생각을 짐작할 수 있다.</p></div>
+</div>
+<div class="callout"><b>살펴볼 점</b><br>경복궁, 종묘, 사직단은 각각 어떤 일을 위한 장소였을까? 이 시설들이 한양에 함께 마련된 까닭은 무엇일까?</div>
+</section>
+
+<section class="page" id="law">
+<div class="pagehead"><div class="eyebrow">FIELD 03 · 법</div><h2>법을 마련해 나라를 다스리다</h2><p>나라가 안정되려면 관리와 백성이 따라야 할 기준이 필요했다. 조선은 여러 법과 규정을 정리해 통치 체제를 갖추었다.</p></div>
+<div class="cards">
+<div class="card"><span class="pill">나라의 기본 법전</span><h3>『경국대전』</h3><p>『경국대전』은 조선의 통치에 필요한 여러 규정을 모아 정리한 법전이다. ‘경국’은 나라를 다스린다는 뜻이고, ‘대전’은 큰 법전이라는 뜻이다. 나라를 운영할 때 참고할 공통된 기준을 마련하려는 목적이 있었다.</p></div>
+<div class="card"><span class="pill">완성까지 오랜 시간</span><h3>누가, 언제 만들었을까?</h3><p>법전을 만드는 일은 한 사람의 생각만으로 끝나는 일이 아니었다. 여러 관리가 법과 제도를 검토하고 고치는 과정이 필요했다. 『경국대전』은 세조 때 편찬을 시작해 성종 때 완성되었고, 1485년에 시행되었다.</p></div>
+<div class="card"><span class="pill">여섯 분야</span><h3>『경국대전』의 구성</h3><p>『경국대전』은 나라의 일을 여섯 분야로 나누어 정리했다. 관리와 관청, 세금과 재산, 의례와 교육 관련 규정, 군사, 형벌과 재판, 도로와 건축 등 나라를 운영하는 데 필요한 내용이 담겼다.</p></div>
+<div class="card"><span class="pill">법이 하는 일</span><h3>공통된 기준을 세우다</h3><p>법과 규정이 정리되면 관리들은 나라의 일을 처리할 때 기준으로 삼을 수 있었다. 여러 지역에서 비슷한 기준으로 행정을 운영하는 데에도 도움이 되었다.</p></div>
+</div>
+<h3>『경국대전』의 여섯 분야</h3>
+<div class="timeline">
+<div class="time"><b>이전</b>관리와 관청에 관한 일</div><div class="time"><b>호전</b>세금·토지·재정에 관한 일</div><div class="time"><b>예전</b>의례·과거 시험 등에 관한 일</div><div class="time"><b>병전</b>군사와 국방에 관한 일</div><div class="time"><b>형전</b>형벌과 재판 등에 관한 일</div><div class="time"><b>공전</b>도로·다리·건축 등에 관한 일</div>
+</div>
+<div class="callout"><b>더 알아보기</b><br>『경국대전』은 하루아침에 만들어지지 않았다. 조선 건국 초기부터 여러 법과 규정을 정리해 왔으며, 오랜 편찬 과정을 거쳐 나라의 기본 법전으로 자리 잡았다. 이후 사회가 변하면서 새로운 법전과 규정도 만들어졌다.</div>
+<div class="callout"><b>살펴볼 점</b><br>나라에 공통된 법이 없다면 어떤 어려움이 생길까? 『경국대전』의 여섯 분야 중 우리 생활과 관련 있다고 생각하는 분야는 무엇일까?</div>
+</section>
+
+<section class="page" id="confucian">
+<div class="pagehead"><div class="eyebrow">FIELD 04 · 유교</div><h2>조선은 왜 유교를 나라의 기본 정신으로 삼았을까?</h2><p>조선은 유교의 가르침을 바탕으로 나라를 다스리고 사람 사이의 관계와 사회의 질서를 세우고자 했다.</p></div>
+<div class="cards">
+<div class="card"><span class="pill">나라를 다스리는 생각</span><h3>유교를 바탕으로 한 정치</h3><p>유교는 부모와 자녀, 어른과 아이, 임금과 신하처럼 사람 사이에서 지켜야 할 도리와 책임을 중요하게 여겼다. 조선은 이러한 가르침을 정치와 사회의 기준으로 삼고자 했다.</p></div>
+<div class="card"><span class="pill">배움과 실천</span><h3>글을 배우고 예를 익히다</h3><p>조선은 유교 경전을 배우고, 배운 내용을 생활 속에서 실천하는 것을 중요하게 생각했다. 예를 지키고 부모와 어른을 공경하며 맡은 일을 책임 있게 하는 태도를 강조했다.</p></div>
+<div class="card"><span class="pill">공간에 담긴 생각</span><h3>한양의 건축물과 유교</h3><p>궁궐과 종묘, 사직단 등은 단순히 건물을 세운 것만이 아니라 조선이 중요하게 여긴 가치와 의식을 드러냈다. 건물의 역할과 이름을 살펴보면 유교가 나라 운영과 연결되어 있음을 알 수 있다.</p></div>
+<div class="card"><span class="pill">사회에 미친 영향</span><h3>생활과 제도의 기준</h3><p>유교는 정치뿐 아니라 가족 관계, 제사, 교육, 예절 등 여러 생활 모습에도 영향을 주었다. 다만 과거의 사회 질서가 오늘날의 생각과 모두 같았던 것은 아니므로 당시의 모습과 오늘날을 구분해 살펴볼 필요가 있다.</p></div>
+</div>
+<div class="callout"><b>함께 생각해 볼 점</b><br>조선은 유교의 어떤 점을 나라를 다스리는 데 중요하게 여겼을까? 유교의 생각은 법과 건축물, 교육에 어떻게 나타났을까?</div>
+<h3>자료 속 낱말</h3><div class="glossary"><div><b>유교</b> 사람 사이의 도리와 배움, 예절 등을 중요하게 여기는 사상</div><div><b>예</b> 상황과 관계에 맞게 지켜야 할 예절과 의식</div><div><b>경전</b> 중요하게 여겨 오래 읽고 배우는 책</div><div><b>제사</b> 조상이나 신에게 예를 갖추는 의식</div></div>
+</section>
+
+<section class="page" id="education">
+<div class="pagehead"><div class="eyebrow">FIELD 05 · 교육</div><h2>조선 사람들은 어디에서 유교를 배웠을까?</h2><p>조선은 유교 지식을 배우고 실천할 사람을 기르기 위해 여러 교육 기관을 마련했다.</p></div>
+<div class="cards">
+<div class="card"><span class="pill">오늘날의 대학과 비슷한 역할</span><h3>성균관</h3><p>성균관은 조선의 대표적인 최고 교육 기관이다. 주로 유교 경전을 공부하고 나라를 이끌 관리가 될 인재를 기르는 역할을 했다.</p></div>
+<div class="card"><span class="pill">서울의 교육 기관</span><h3>사학</h3><p>사학은 한양에 설치된 네 곳의 교육 기관을 가리킨다. 학생들은 유교 경전을 배우며 과거 시험을 준비하기도 했다.</p></div>
+<div class="card"><span class="pill">지방의 교육 기관</span><h3>향교</h3><p>향교는 지방에 세운 공립 교육 기관이다. 유교 경전을 가르치는 한편 공자 등 성현에게 제사를 지내는 기능도 했다.</p></div>
+<div class="card"><span class="pill">민간에서 세운 교육 기관</span><h3>서원</h3><p>서원은 학문을 연구하고 유학자를 기리기 위해 지방의 선비들이 세운 교육 기관이다. 향교와 달리 민간에서 세운 교육 기관이라는 점이 특징이다.</p></div>
+</div>
+<h3>교육 기관 한눈에 보기</h3>
+<div class="timeline">
+<div class="time"><b>성균관</b>나라의 최고 교육 기관</div><div class="time"><b>사학</b>한양의 네 교육 기관</div><div class="time"><b>향교</b>지방의 공립 교육 기관</div><div class="time"><b>서원</b>민간에서 세운 교육 기관</div>
+</div>
+<div class="callout"><b>교육을 중요하게 여긴 까닭</b><br>조선은 유교를 바탕으로 나라를 다스리고자 했기 때문에 유교 경전을 배우고 실천하는 일이 중요했다. 교육 기관은 학생들이 공부하고 관리가 될 준비를 하는 장소이기도 했다.</div>
+<div class="callout"><b>살펴볼 점</b><br>성균관, 향교, 서원은 어떤 점이 같고 다를까? 조선에서 교육을 받는 일이 나라를 다스리는 것과 어떻게 연결되었을까?</div>
+</section>
+</div></div>
+</main>
+
+<script>
+const buttons=[...document.querySelectorAll('.navbtn')],pages=[...document.querySelectorAll('.page')];
+buttons.forEach(button=>button.addEventListener('click',()=>{buttons.forEach(b=>b.classList.toggle('active',b===button));pages.forEach(p=>p.classList.toggle('active',p.id===button.dataset.page));window.scrollTo({top:0,behavior:'smooth'});}));
+</script>
+</body></html>
